@@ -1,0 +1,17 @@
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## DP: setserial Makefile patch
+
+@DPATCH@
+
+diff -Naurp setserial-2.17.orig/Makefile.in setserial-2.17/Makefile.in
+--- setserial-2.17.orig/Makefile.in	2008-09-26 21:59:11.000000000 +0000
++++ setserial-2.17/Makefile.in	2008-09-26 21:59:26.000000000 +0000
+@@ -28,7 +28,7 @@ setserial.cat: setserial.8
+ install: setserial setserial.8
+ 	$(INSTALL_PROGRAM) setserial $(DESTDIR)/bin
+ 	$(STRIP) $(DESTDIR)/bin/setserial
+-	$(INSTALL_DATA) setserial.8 $(DESTDIR)/usr/man/man8
++	$(INSTALL_DATA) setserial.8 $(DESTDIR)/usr/share/man/man8
+ 
+ clean:
+ 	$(RM) setserial setserial.o setserial.cat *~

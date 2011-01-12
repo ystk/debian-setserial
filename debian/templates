@@ -1,0 +1,44 @@
+# These templates have been reviewed by the debian-l10n-english
+# team
+#
+# If modifications/additions/rewording are needed, please ask
+# debian-l10n-english@lists.debian.org for advice.
+#
+# Even minor modifications require translation updates and such
+# changes should be coordinated with translators and reviewers.
+
+Template: setserial/autosave
+Type: boolean
+Default: true
+_Description: Automatically configure the serial port parameters?
+ It is recommended that the serial port parameters should be
+ configured automatically. It is also possible to configure them
+ manually by editing the file /etc/serial.conf.
+ .
+ PCMCIA serial-type devices should be configured with pcmciautils. See
+ /usr/share/doc/setserial/README.Debian.gz for details.
+
+Template: setserial/autosave-types
+Type: select
+__Choices: autosave once, manual, autosave always, kernel
+Default: autosave once
+_Description: Type of automatic serial port configuration:
+ Setserial allows saving the current serial configuration in various ways:
+ .
+  autosave once  : save only once, now;
+  manual         : never save the configuration automatically;
+  autosave always: save on every system shutdown (risks overwriting the
+                   serial.conf file with errors);
+  kernel         : do not use the serial.conf file and use the kernel settings
+                   at bootup.
+
+Template: setserial/update-modules-failed
+Type: error
+_Description: Error during update-modules configuration for setserial
+ The setserial configuration process tried to install the module
+ management code to support the serial.o module being loaded and
+ unloaded dynamically by the kernel module loader.
+ .
+ This process failed. This may be caused by a non-standard module
+ configuration and should be solved manually by running
+ '/sbin/update-modules'.

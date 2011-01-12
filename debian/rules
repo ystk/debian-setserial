@@ -1,0 +1,82 @@
+#!/usr/bin/make -f
+# Copyright 1994,1995 by Ian Jackson, 1998 Christoph Lameter
+# debian/rules for setserial, by Gordon Russell.
+
+include /usr/share/dpatch/dpatch.make
+
+DESTDIR = $(CURDIR)/debian/setserial
+arch = $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+
+build: stamp-build
+stamp-build: patch-stamp
+	dh_testdir
+ifneq "$(wildcard /usr/share/misc/config.sub)" ""
+	cp -f /usr/share/misc/config.sub config.sub
+endif
+ifneq "$(wildcard /usr/share/misc/config.guess)" ""
+	cp -f /usr/share/misc/config.guess config.guess
+endif
+	./configure --prefix=/usr
+	# make both m68k 2.2 and 2.4+ kernels work effectively
+	#
+	rm -f gorhack.h
+	if test -r /usr/include/linux/m68kserial.h ; then \
+	  touch gorhack.h; \
+	else \
+	  echo "#undef __mc68000__" > gorhack.h ; \
+	fi
+	$(MAKE) setserial CFLAGS="-O2"
+	touch $@
+
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	rm -f config.sub config.guess
+	[ ! -f Makefile ] || $(MAKE) distclean
+	rm -f gorhack.h setserial.8
+	dh_clean stamp-build
+
+binary-indep:
+# There are no architecture-independent packages here.
+
+binary-arch: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+
+	dh_installdirs
+	install -g root -m 755 -o root setserial   $(DESTDIR)/bin
+	install -g root -m 644 -o root    setserial.8 \
+		$(DESTDIR)/usr/share/man/man8/setserial.8
+	echo ${arch}
+	if [ "${arch}" = "m68k" ] ; then \
+	  echo "Using rc.serial.m68k" ;\
+	  install -g root -m 755 -o root    rc.serial.m68k \
+		$(DESTDIR)/etc/init.d/setserial ; \
+	else \
+	  echo "Using rc.serial" ;\
+	  install -g root -m 755 -o root  rc.serial \
+		$(DESTDIR)/etc/init.d/setserial ; \
+	  install -g root -m 755 -o root  rc.etc-setserial \
+		$(DESTDIR)/etc/init.d/etc-setserial ; \
+	  install -g root -m 644 -o root    serial.conf $(DESTDIR)/usr/share/doc/setserial/serial.conf ;\
+	  install -g root -m 644 -o root    debian/setserial.modutils $(DESTDIR)/etc/modutils/setserial ;\
+	fi
+	if [ "${arch}" = "sparc" ] ; then \
+	  install -g root -m 644 -o root    serial.conf.sparc $(DESTDIR)/usr/share/doc/setserial/serial.conf ;\
+	fi
+
+	dh_installdocs README pcmcia.repair
+	dh_installchangelogs
+	dh_installdebconf
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_shlibdeps
+	dh_gencontrol
+	dh_installdeb
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary binary-arch binary-indep

@@ -1,0 +1,133 @@
+# Dutch setserial po-debconf translation,
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the setserial package.
+# Vincent Zweije <zweije@xs4all.nl>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: setserial 2.17-44.1\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: 2008-02-13 21:59+0000\n"
+"Last-Translator: Vincent Zweije <zweije@xs4all.nl>\n"
+"Language-Team: Debian l10n Dutch <debian-l10n-dutch@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "Seriële poortparameters automatisch instellen?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"Het wordt aanbevolen de seriële poortparameters automatisch te laten "
+"instellen. Het is ook mogelijk om ze handmatig in te stellen door /etc/"
+"serial.conf te wijzigen."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"PCMCIA apparaten van het seriële type kunnen het beste met pcmciautils "
+"worden ingesteld. Zie /usr/share/doc/setserial/README.Debian.gz voor nadere "
+"informatie."
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "éénmalig automatisch"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "handmatig"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "altijd automatisch"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "kernel"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "Type van automatische instelling van seriële poort:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr ""
+"Setserial staat toe uw huidige seriële instelling op verschillende manieren "
+"te bewaren:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+" éénmalig automatisch: nu éénmalig automatisch bewaren;\n"
+" handmatig           : nooit automatisch bewaren;\n"
+" altijd automatisch  : altijd automatisch bewaren (met het risico dat\n"
+"                       /etc/serial.conf met fouten wordt overschreven);\n"
+" kernel              : /etc/serial.conf niet gebruiken, maar de kernel\n"
+"                       instellingen gebruiken bij het opstarten."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "Fout tijdens update-modules instelling voor setserial"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"Het setserial-instelproces heeft geprobeerd om de modulebeheercode te "
+"installeren die moet ondersteunen dat de serial.o module dynamisch door de "
+"kernel wordt ingeladen en vrijgegeven."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"Dit proces is mislukt. Dit kan zijn veroorzaakt door een niet-standaard "
+"moduleconfiguratie, en dient te worden verholpen door handmatig '/sbin/"
+"update-modules' uit te voeren."

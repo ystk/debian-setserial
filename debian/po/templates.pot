@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""

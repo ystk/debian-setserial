@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "Automatikoki konfiguratu serie ataka parametroak?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"Gomendagarria da serial ataka parametroak automatikoki konfiguratzea. "
+"Posible da hala ere eskuz egitea /etc/serial.conf fixtategia eraldatuz."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"PCMCIA serie-motako gailuak pcmciautils bidez konfiguratu behar dira. /usr/"
+"share/doc/setserial/README.Debian.gz irakurri xehetasunetarako."
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "automatikoki gorde behin"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "eskuz"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "automatikoki gorde beti"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "kernel-a"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "Serie ataka konfigruazio automatiko mota:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr ""
+"Setserial-ek uneko serie ataka konfigruazio modu ezberdinetan gordetzeko "
+"aukera ematen du:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+" automatikoki gorde behin: save only once, now;\n"
+" eskuz                   : never save the configuration automatically;\n"
+" automatikoki gorde beti : gorde sistema itzaltzen den bakoitzean (serial."
+"conf\n"
+"                           fitxategia eroreeekin gordetzeko arriskua);\n"
+" kernela                 : ez erabili serial.conf fotxategia eta kernel "
+"ezarpenak\n"
+"                           erabili abiaraztean."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "Errorea setserial-entzat modulu-eguneraketa konfiguratzean"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"Setserial konfigurazio prozesuak serial.o modulua onartzeko modulu kudeaketa "
+"modulua instalatzen saiatu da, modulua kernel modulu kargatzailearen bidez "
+"modulua kargatu edo deskartu ahal izateko."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"Prozesu honek huts egin du. Hau estandarra ez den modulu konfigruazio "
+"bategatik izan daitekee eta '/sbin/update-modules' abiaraziaz eskuz konpondu "
+"ahal beharko zen."
+
+#~ msgid "Please read documentation on old 0setserial entries"
+#~ msgstr "Mesedez irakurri 0setserial sarrera zaharretako dokumentazioa"
+
+#~ msgid ""
+#~ "You have an old-style 0setserial entry. The configuration mechanism has "
+#~ "changed completely after setserial release 2.14."
+#~ msgstr ""
+#~ "Modu zaharreko 0setserial sarrera bat duzu. Konfigruazio mekanismoa guziz "
+#~ "aldatu da setserial 2.14 bertsiaoren ondoren."
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
+#~ "2.15."
+#~ msgstr ""
+#~ "Zure /etc/rc.boot/0setserial fitxategi zaharra 0setserial.pre-2.15 bezala "
+#~ "berrizendatu da."
+
+#~ msgid ""
+#~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."
+#~ msgstr ""
+#~ "/usr/share/doc/setserial/README.Debian.gz irakurri argibide gehiagorako."
+
+#~ msgid "New method of bootup initialization used"
+#~ msgstr "Abiaratze metodo berria erabilia"
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was removed. The /etc/init.d/"
+#~ "setserial file is used instead."
+#~ msgstr ""
+#~ "Zure /etc/rc.boot/0setserial fixtategia ezabatu egin zen. /etc/init.d/"
+#~ "setserial fitxategia erabiltzen da horren ordez."

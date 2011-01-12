@@ -1,0 +1,45 @@
+http://www.hpl.hp.com/personal/Jean_Tourrilhes/bt/setserial_16C950-2.diff
+
+diff -u -p setserial.brain.c setserial.c
+--- setserial.brain.c	Mon Oct 29 16:49:10 2001
++++ setserial.c	Mon Oct 29 17:01:54 2001
+@@ -77,6 +77,7 @@ struct serial_type_struct {
+ #define CMD_FLOW_ON     16
+ #define CMD_RX_TMOUT    17
+ #define CMD_DMA_CHAN    18
++#define CMD_WMSR        19
+ 
+ #define FLAG_CAN_INVERT	0x0001
+ #define FLAG_NEED_ARG	0x0002
+@@ -126,9 +127,15 @@ struct flag_type_table {
+ 	CMD_RX_TMOUT,   "rx_timeout",   0,              0,              0, FLAG_NEED_ARG,
+ 	CMD_DMA_CHAN,   "dma_channel",  0,              0,              0, FLAG_NEED_ARG,
+ #endif
++	CMD_WMSR,	"wmsr",		0,		0,		0, FLAG_NEED_ARG,
+ 	0,		0,		0,		0,		0, 0,
+ };
+ 	
++/* Kernel header will take ages before beeing updated in distributions */
++#ifndef TIOCSERSETWMSR
++#define TIOCSERSETWMSR  0x5461	/* Set custom write in Modem Status Register */
++#endif	/* TIOCSERSETWMSR */
++
+ char *serial_type(int id)
+ {
+ 	int i;
+@@ -603,6 +610,15 @@ void set_serial(char *device, char ** ar
+ 			set_hayesesp(fd, p->cmd, atonum(*arg++));
+ 			break;
+ #endif
++		case CMD_WMSR:
++			{
++				unsigned char wmsr = atonum(*arg++);
++				if (ioctl(fd, TIOCSERSETWMSR, &wmsr) < 0) {
++					perror("Cannot set wmsr");
++					exit(1);
++				}
++			}
++			break;
+ 		default:
+ 			fprintf(stderr, "Internal error: unhandled cmd #%d\n", p->cmd);
+ 			exit(1);

@@ -1,0 +1,25 @@
+Source: setserial
+Section: comm
+Priority: extra
+Maintainer: Jonas Genannt <jonas.genannt@capi2name.de>
+Uploaders: Ola Lundqvist <opal@debian.org>
+Build-Depends: debhelper (>= 5), autotools-dev, po-debconf, dpatch
+Standards-Version: 3.8.0
+
+Package: setserial
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: controls configuration of serial ports
+ Set and/or report the configuration information associated with
+ a serial port. This information includes what I/O port and which IRQ
+ a particular serial port is using.
+ .
+ This version has a completely new approach to configuration, so if you
+ have a setup other than the standard ttyS0 and 1, you will have to get
+ your hands dirty.
+ .
+ By default, only COM1-4 are configured by the kernel, using IRQ 3 and 4.
+ If you have other serial ports (such as an AST Fourport card), or
+ if you have mapped the IRQs differently (perhaps COM3 and 4 to other
+ IRQs to allow concurrent access with COM1 and 2) then you must have this
+ package.

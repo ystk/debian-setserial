@@ -1,0 +1,178 @@
+# translation of ru.po to Russian
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+#
+# Yuri Kozlov <kozlov.y@gmail.com>, 2005, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.17-45\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: 2008-02-07 20:50+0300\n"
+"Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
+"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "Настроить параметры последовательного порта автоматически?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"Рекомендуется выбрать автоматическую настройку параметров последовательного "
+"порта. Также их можно настраивать вручную через редактирование файла /etc/"
+"serial.conf."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"Устройства последовательного типа с интерфейсом PCMCIA должны настраиваться "
+"с помощью pcmciautils. Подробности смотрите в файле /usr/share/doc/setserial/"
+"README.Debian.gz."
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "однократное автосохранение"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "вручную"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "постоянное автосохранение"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "из параметров ядра"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "Метод автоматической настройки последовательных портов:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr ""
+"Setserial позволяет сохранять настройки последовательных портов различными "
+"способами:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+" однократное автосохранение: сохранить один раз, сейчас\n"
+" вручную:                    никогда не сохранять настройки автоматически\n"
+" постоянное автосохранение:  сохранять при каждом выключении системы (есть\n"
+"                             риск записать файл serial.conf с ошибками)\n"
+" из параметров ядра:         не использовать файл serial.conf,\n"
+"                             применять настройки ядра при загрузке"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "Ошибка при работе update-modules по настройке setserial"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"В процессе настройки setserial была попытка установить модуль управления "
+"кодом для динамической загрузки и выгрузки модуля serial.o с помощью "
+"ядерного загрузчика модулей."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"Процесс завершился неудачно. Вероятно, в настройках модуля содержатся какие-"
+"то нестандартные параметры. Попробуйте запустить '/sbin/update-modules' "
+"вручную."
+
+#~ msgid "Please read documentation on old 0setserial entries"
+#~ msgstr ""
+#~ "Пожалуйста, прочтите документацию по старым настройкам из 0setserial"
+
+#~ msgid ""
+#~ "You have an old-style 0setserial entry. The configuration mechanism has "
+#~ "changed completely after setserial release 2.14."
+#~ msgstr ""
+#~ "Файл 0setserial содержит настройки в старом формате. После выпуска пакета "
+#~ "setserial версии 2.14 механизм настроек был полностью изменён."
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
+#~ "2.15."
+#~ msgstr ""
+#~ "Ваш старый файл /etc/rc.boot/0setserial был переименован в 0setserial.pre-"
+#~ "2.15."
+
+#~ msgid ""
+#~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."
+#~ msgstr ""
+#~ "Более подробные сведения изложены в файле /usr/share/doc/setserial/README."
+#~ "Debian.gz."
+
+#~ msgid "New method of bootup initialization used"
+#~ msgstr "Используется новый метод инициализации"
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was removed. The /etc/init.d/"
+#~ "setserial file is used instead."
+#~ msgstr ""
+#~ "Старый файл /etc/rc.boot/0setserial был удален. Вместо него используется "
+#~ "файл /etc/init.d/setserial."

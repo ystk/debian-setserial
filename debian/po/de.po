@@ -1,0 +1,250 @@
+# Translation of setserial debconf templates to German
+# Previous translator(s) unkown
+# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2008.
+# This file is distributed under the same license as the setserial package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: setserial\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: 2008-02-24 21:01+0100\n"
+"Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
+"Language-Team: de <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "Konfiguriere die Parameter der seriellen Schnittstelle automatisch?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"Es wird empfohlen, dass die Parameter der seriellen Schnittstelle "
+"automatisch konfiguriert werden. Eine manuelle Konfiguration durch "
+"Bearbeitung der Datei /etc/serial.conf ist auch möglich."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"Seriell-artige PCMCIA-Geräte sollten mit den Pcmciautils konfiguriert "
+"werden. Lesen Sie /usr/share/doc/setserial/README.Debian.gz für weitere "
+"Details."
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "einmal automatisch speichern"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "händisch"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "immer automatisch speichern"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "Kernel"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "Art der automatischen Konfiguration der seriellen Schnittstelle:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr ""
+"Setserial erlaubt das Speichern der aktuellen Konfiguration für die serielle "
+"Schnittstelle auf verschiedene Arten:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+"einmal automatisch speichern: nur einmal (jetzt) speichern;\n"
+"händisch                    : die Konfiguration niemals automatisch "
+"speichern;\n"
+"immer automatisch speichern : jedes Mal beim Herunterfahren des Systems\n"
+"                              speichern (riskiert das Überschreiben der "
+"Datei\n"
+"                              serial.conf mit Fehlern);"
+"Kernel                      : verwende statt der Datei serial.conf "
+"die                               Kernel-Einstellungen beim Systemstart."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "Fehler während der update-modules-Konfiguration für Setserial"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"Die Konfiguration für Setserial versuchte, das Modul für Management-Code zu "
+"laden, um das dynamische Laden bzw. Entladen des serial.o-Moduls durch den "
+"Kernel-Modul-Lader zu ermöglichen."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"Dieser Prozess ist fehlgeschlagen. Dies kann durch eine vom Normalfall "
+"abweichende Modul-Konfiguration hervorgerufen worden sein und sollte durch "
+"händischen Aufruf von »/sbin/update-modules« behoben werden."
+
+#~ msgid "Please read documentation on old 0setserial entries"
+#~ msgstr "Bitte lesen Sie die Dokumentation über alte 0setserial-Einträge"
+
+#~ msgid ""
+#~ "You have an old-style 0setserial entry. The configuration mechanism has "
+#~ "changed completely after setserial release 2.14."
+#~ msgstr ""
+#~ "Sie haben einen alten 0setserial-Eintrag. Der Konfigurationsmechanismus "
+#~ "wurde nach der Version 2.14 komplett geändert."
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
+#~ "2.15."
+#~ msgstr ""
+#~ "Ihre alte Datei /etc/rc.boot/0setserial wurde jetzt in 0setserial.pre-"
+#~ "2.15 umbenannt."
+
+#~ msgid ""
+#~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."
+#~ msgstr ""
+#~ "Weitere Informationen finden Sie in der Datei /usr/share/doc/setserial/"
+#~ "README.Debian.gz."
+
+#~ msgid "New method of bootup initialization used"
+#~ msgstr "Neue Methode der Initialisierung beim Start"
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was removed. The /etc/init.d/"
+#~ "setserial file is used instead."
+#~ msgstr ""
+#~ "Ihre alte Datei /etc/rc.boot/0setserial wurde jetzt gelöscht. /etc/init.d/"
+#~ "setserial wird stattdessen verwendet."
+
+#~ msgid "Do you want the automatic serial port configuration?"
+#~ msgstr "Wollen Sie die automatische Konfiguration der seriellen Ports?"
+
+#~ msgid ""
+#~ "All releases of setserial since 2.15 use the file /etc/serial.conf to "
+#~ "configure the serial ports. You can edit it to your own likings, or use "
+#~ "the automatic serial port configuration, which is the recommended way of "
+#~ "doing it."
+#~ msgstr ""
+#~ "Alle Versionen von »serserial« seit 2.15 benutzen die Datei /etc/serial."
+#~ "conf zum Konfigurieren von seriellen Schnittstellen. Sie können diese "
+#~ "Datei nach eigenen Wünschen anpassen, oder die automatische Port-"
+#~ "Konfiguration verwenden (empfohlen)."
+
+#~ msgid ""
+#~ "Attention PCMCIA users - pcmcia-cs has its own configuration for PC Card "
+#~ "serial-type devices, which is not compatible with setserial. In case of "
+#~ "problems, please read the /usr/share/doc/setserial/README.Debian.gz file."
+#~ msgstr ""
+#~ "Achtung PCMCIA-Benutzer! pcmcia-cs hat eine eigene Konfiguration für die "
+#~ "seriellen PC-CARD Geräte, die nicht kompatibel mit »setserial« ist. Bei "
+#~ "Problemen lesen Sie bitte die Datei /usr/share/doc/setserial/README."
+#~ "Debian.gz."
+
+#~ msgid "autosave once, manual, autosave always, kernel"
+#~ msgstr "autosave once, manual, autosave always, kernel"
+
+#~ msgid ""
+#~ "Setserial contains the ability to save your current serial "
+#~ "configurations, but you have to decide the method which setserial is to "
+#~ "use."
+#~ msgstr ""
+#~ "Setserial bietet die Möglichkeit, ihre derzeitige Konfiguration der "
+#~ "seriellen Ports zu speichern, aber Sie müssen entscheiden, auf welche "
+#~ "Weise das geschehen soll."
+
+#~ msgid ""
+#~ "autosave once - this saves your serial configuration the first time you "
+#~ "select this option, using kernel information. From this point on this "
+#~ "information is never changed automatically again. If you want the "
+#~ "configuration to change you have to edit serial.conf by hand. This is the "
+#~ "default and is good in almost all cases."
+#~ msgstr ""
+#~ "»autosave once« - damit wird die Konfiguration nur einmalig gespeichert, "
+#~ "zu dem Zeitpunkt, als Sie diese Option auswählen. Von da an wird die "
+#~ "Information nie mehr automatisch geändert. Wenn Sie etwas daran ändern "
+#~ "möchten, müssen Sie das selbst in der Datei serial.conf tun. Das ist die "
+#~ "in Normalfall empfohlene Standardeinstellung."
+
+#~ msgid ""
+#~ "manual - control serial.conf yourself right from the start. Good for "
+#~ "experts who like to get their hands dirty, but autosave-once is probably "
+#~ "still better."
+#~ msgstr ""
+#~ "»manual« - Sie konfigurieren serial.conf von Anfang an selbst. Gut für "
+#~ "Experten, die ihre Hände gerne dreckig machen, aber »autosave-once« ist "
+#~ "meistens besser."
+
+#~ msgid ""
+#~ "autosave always - save the serial configuration on every system shutdown, "
+#~ "and reload the saved state when you reboot. Good if you change your "
+#~ "serial configuration a lot, but DANGEROUS as rebooting a system with "
+#~ "\"errors\" can result in the complete loss of your serial configuration!"
+#~ msgstr ""
+#~ "»autosave always« - speichert die Einstellungen bei jedem Herunterfahren "
+#~ "des Systems. Gut, wenn Sie die Konfiguration der seriellen Ports öfters "
+#~ "ändern, aber GEFÄHRLICH, weil ein neustart mit »Fehlern« im Verlust der "
+#~ "gesamten Seriell-Konfiguration enden kann."
+
+#~ msgid ""
+#~ "kernel - blank the serial.conf file and use the kernel settings on "
+#~ "bootup. This may be useful for standard situations or where setserial has "
+#~ "become confused."
+#~ msgstr ""
+#~ "»kernel« - leere serial.conf-Datei und verwende die Kernel-Einstellungen "
+#~ "beim Booten. Das ist ganz praktisch in Standard-Situationen, in denen "
+#~ "»setserial« durcheinander kommt."
+
+#~ msgid "update-modules failed!"
+#~ msgstr "update-modules schlug fehl!"

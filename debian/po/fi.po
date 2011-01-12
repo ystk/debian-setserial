@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: setserial\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: 2008-02-08 00:18+0200\n"
+"Last-Translator: Esko Arajärvi <edu@iki.fi>\n"
+"Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Finnish\n"
+"X-Poedit-Country: FINLAND\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "Asetetaanko sarjaportin parametrit automaattisesti?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"Sarjaportin parametrien asettaminen automaattisesti on suositeltavaa. Ne "
+"voidaan myös tehdä käsin muokkaamalla tiedostoa /etc/serial.conf."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"PCMCIA serial -tyyppiset laitteet tulisi asettaa ohjelman pcmciautils "
+"avulla. Tiedostosta /usr/share/doc/setserial/README.Debian.gz löytyy "
+"lisätietoja (englanniksi)."
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "tallenna kerran"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "manuaalinen"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "tallenna aina"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "ydin"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "Sarjaportin asetusten tekotapa:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr ""
+"Setserial mahdollistaa nykyisten sarja-asetusten tallentamisen seuraavilla "
+"tavoilla:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+" tallenna kerran: tallenna vain kerran, nyt\n"
+" manuaalinen:     älä koskaan tallenna automaattisesti\n"
+" tallenna aina:   tallenna aina sammutettaessa järjestelmä (riskinä\n"
+"                  virheellisten tietojen kirjoitus serial.conf:iin)\n"
+" ydin:            älä käytä tiedostoa serial.conf vaan ytimen asetuksia"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "Virhe tehtäessä update-modules-asetuksia setserialille"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"Setserialin asetusprosessi yritti asentaa moduulinhallintakoodia lisätäkseen "
+"ytimen moduulienlataajaan tuen moduulin serial.o lataamiselle ja "
+"poistamiselle dynaamisesti."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"Tämä prosessi epäonnistui. Tämän saattoi aiheuttaa epästandardit "
+"moduuliasetukset. Ongelma tulisi ratkaista ajamalla ”/sbin/update-modules”."

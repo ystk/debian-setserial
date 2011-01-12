@@ -1,0 +1,17 @@
+01_makefile.dpatch
+04_pcmcia_readme.dpatch
+05_pcmcia_cardctl.dpatch
+06_pcmcia_cardctl_out.dpatch
+07_pcmcia_var_run_stab.dpatch
+08_pcmcia_c.dpatch
+09_pcmcia_repair.dpatch
+10_rc_etc_setserial.dpatch
+11_rc_serial.dpatch
+12_rc_serial_m68k.dpatch
+13_rc_serial_upstream.dpatch
+14_safety_h.dpatch
+15_serial_conf.dpatch
+16_serial_conf_sparc.dpatch
+17_setserial_8_in.dpatch
+18_setserial_c.dpatch
+19_version_h.dpatch

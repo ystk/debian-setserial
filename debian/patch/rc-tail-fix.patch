@@ -1,0 +1,54 @@
+2003-04-11  Paul Eggert  <eggert@twinsun.com>
+
+	* debian/postinst, rc.serial, rc.serial.upstream:
+	Use "sed 1q" rather than "head -1", as the latter has been
+	withdrawn in POSIX 1003.1-2001 and no longer works with
+	recent versions of coreutils if _POSIX2_VERSION=200112
+	in your environment.
+
+diff -pru setserial-2.17-32/rc.serial setserial-2.17-32-fix/rc.serial
+--- setserial-2.17-32/rc.serial	2003-04-11 13:05:26.000000000 -0700
++++ setserial-2.17-32-fix/rc.serial	2003-04-11 13:07:16.000000000 -0700
+@@ -93,7 +93,7 @@ if test $action  = stop ; then
+ 	if [ -e ${etcconfig} ]; then
+ 		#nothing to do
+ 		dummy=0;
+-	elif test "`head -1 $autoconfig`X" = "###AUTOSAVE###X" ; then
++	elif test "`sed 1q $autoconfig`X" = "###AUTOSAVE###X" ; then
+ 		echo -n "Saving state of known serial devices... "
+ 		grep "^#" $autoconfig > ${autoconfig}.new
+ 		${SETSERIAL} -G -g ${ALLDEVS} | grep -v "uart unknown\|pcmcia" >> ${autoconfig}.new
+@@ -101,7 +101,7 @@ if test $action  = stop ; then
+ 		mv $autoconfig ${autoconfig}.old
+ 		mv ${autoconfig}.new $autoconfig
+ 		echo " done."
+-	elif test "`head -1 $autoconfig`X" = "###AUTOSAVE-FULL###X" ; then
++	elif test "`sed 1q $autoconfig`X" = "###AUTOSAVE-FULL###X" ; then
+ 		echo -n "Saving state (including unknowns) of serial devices... "
+ 		grep "^#" $autoconfig > ${autoconfig}.new
+ 		${SETSERIAL} -G -g ${ALLDEVS} | grep -v "pcmcia" >> ${autoconfig}.new
+@@ -109,7 +109,7 @@ if test $action  = stop ; then
+ 		mv $autoconfig ${autoconfig}.old
+ 		mv ${autoconfig}.new $autoconfig
+ 		echo " done."
+-	elif test "`head -1 $autoconfig`X" = "###AUTOSAVE-ONCE###X" ; then
++	elif test "`sed 1q $autoconfig`X" = "###AUTOSAVE-ONCE###X" ; then
+ 		echo -n "Saving state of known serial devices... "
+ 		echo "###PORT STATE GENERATED USING AUTOSAVE-ONCE###" > ${autoconfig}.new
+ 		grep "^#" $autoconfig >> ${autoconfig}.new
+diff -pru setserial-2.17-32/rc.serial.upstream setserial-2.17-32-fix/rc.serial.upstream
+--- setserial-2.17-32/rc.serial.upstream	2003-04-11 13:05:26.000000000 -0700
++++ setserial-2.17-32-fix/rc.serial.upstream	2003-04-11 13:07:16.000000000 -0700
+@@ -79,7 +79,7 @@ esac
+ 
+ if test $action  = stop ; then
+ 	if test -n ${SETSERIAL} -a "$LOADED" != "no" -a \
+-           `head -1 /etc/serial.conf`X = "###AUTOSAVE###X" ; then
++           `sed 1q /etc/serial.conf`X = "###AUTOSAVE###X" ; then
+ 		echo -n "Saving state of serial devices... "
+ 		grep "^#" /etc/serial.conf > /etc/.serial.conf.new
+ 		${SETSERIAL} -G -g ${ALLDEVS} >> /etc/.serial.conf.new
+
+
+
+

@@ -1,0 +1,168 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: setserial 2.17-45\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: 2008-02-07 05:52+0900\n"
+"Last-Translator: Hideki Yamane (Debian-JP) <henrich@debian.or.jp>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "シリアルポートのパラメータを自動的に設定しますか?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"シリアルポートのパラメータを自動的に設定するのをお勧めします。手動で /etc/"
+"serial.conf を編集して設定する事も可能です。"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"PCMCIA シリアルのデバイスは pcmciautils を用いて設定することが必要です。詳細"
+"に付いては /usr/share/doc/setserial/README.Debian.gz を参照してください。"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "初回に自動保存"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "手動で設定"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "常に自動保存"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "カーネルに任せる"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "自動シリアルポート設定の方法:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr "setserial では現在のシリアル設定を様々な方法で保存可能です:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+" 初回に自動保存  : すぐに一度だけ保存する\n"
+" 手動で設定      : 自動的に保存しない\n"
+" 常に自動保存    : システムのシャットダウン時に毎回保存する\n"
+"                  (serial.conf を間違えた設定で上書きするリスクがあります)\n"
+" カーネルに任せる: serial.conf ファイルを使わずに起動時のカーネル設定を使う"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "setserial について update-modules の設定中にエラーが起きました"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"setserial の設定作業中、カーネルモジュールローダによって動的にロード・アン"
+"ロードされる serial.o モジュールをサポートするモジュール管理コードをインス"
+"トールしようとしました。"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"この作業は失敗しました。モジュール設定に何かおかしな所があるかもしれません。"
+"解決するには手動で /sbin/update-modules を実行してみる必要があります。"
+
+#~ msgid "Please read documentation on old 0setserial entries"
+#~ msgstr "以前の 0setserial の記述についてドキュメントを確認してください。"
+
+#~ msgid ""
+#~ "You have an old-style 0setserial entry. The configuration mechanism has "
+#~ "changed completely after setserial release 2.14."
+#~ msgstr ""
+#~ "古いスタイルの 0setserial の記述があります。setserial 2.14 から設定の仕組"
+#~ "みが完全に変更されています。"
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
+#~ "2.15."
+#~ msgstr ""
+#~ "以前の /etc/rc.boot/0setserial は 単に 0setserial.pre-2.15 に名前を変更さ"
+#~ "れます。"
+
+#~ msgid ""
+#~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."
+#~ msgstr ""
+#~ "詳細は /usr/share/doc/setserial/README.Debian.gz を参照してください。"
+
+#~ msgid "New method of bootup initialization used"
+#~ msgstr "起動時に新しい初期化方法が使われます"
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was removed. The /etc/init.d/"
+#~ "setserial file is used instead."
+#~ msgstr ""
+#~ "以前の /etc/rc.boot/0setserial は削除されました。代わりに /etc/init.d/"
+#~ "setserial が利用されます。"

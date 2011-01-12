@@ -1,0 +1,143 @@
+This package was originally put together by Bruce Perens <Bruce@Pixar.com>
+It is now maintained for Debian by Jonas Genannt <jonas.genannt@capi2name.de>
+
+Note that the standard setup for this package is such that you never have
+to change any of the configuration files. As standard, all configuration
+changes made during the on-time of the machine are lost on a 
+shutdown or halt. Only the configuration which existed when the package
+was first installed is kept.
+
+If you are upgrading from a pre 2.15 version of setserial, the old
+0setserial file from rc.boot is renamed. to 0setserial.pre-2.15. This
+will prevent it being run in the future, while still allowing previous
+modifications to this file to be preserved. The new setserial uses
+/etc/serial.conf for configuration, which has a new file format to previous
+versions.
+
+Recently there has been moves in Policy concerning /etc and its use as
+a configuration directory. Basically there is a desire to make it read-only
+and Policy reflects this move. The setserial system before 2.17-28 made
+use of /etc for dynamic storage in breach of Policy. Now it conforms again.
+/etc/serial.conf is used ONLY by the system administrator. If you put
+serial configuration details in that file then those are what you get.
+
+If you have no /etc/serial.conf file all data is held in the 
+/var/lib/setserial directory. This is a private directory and changes in that
+directory should only be made by experts who understand the internals of
+setserial and the Debian package of setserial in particular. You have been
+warned.
+
+Without /etc/serial.conf, serial configuration is controlled via
+debconf. You can review this configuration with something like
+dpkg-reconfigure setserial.
+
+Possible configurations for setserial are:
+  AUTOSAVE ONCE
+  AUTOSAVE ALWAYS
+  KERNEL
+  MANUAL (a legacy option)
+
+If you select AUTOSAVE ALWAYS the serial configuration
+is automatically rebuilt on every shutdown or halt, storing all serial
+ports named which ARE NOT "unknown port". This allows you to set
+serial configurations during uptime, and get them to be persistent
+over reboots without user intervention.
+
+If you select AUTOSAVE ONCE the serial configuration
+the serial port data is taken from the current status at some point
+in the future and stored permanently. This allows you to get your currently
+working serial configuration in a way you can never lose it again in the
+future. Good if you want the details saves even when the ports or modules
+required are unavailable, which can happen in dynamic systems or when there
+is a module configuration error.
+
+As an additional route to fixing problems with setserial, I have added
+to the configuration process an option called KERNEL, which will blank
+all automatically generated information wrt serial configuration and
+rely only on what the kernel reports.
+This would seem a sensible option where you only have
+kernel-detectable serial devices and you are happy with the kernel
+default values. In reality most people can get away with this option as
+standard.
+
+Changing the /var data file by hand is DANGEROUS. You should use
+depconf instead. Failure to change the conf information in debconf will result
+in your changes being lost on the next package upgrade.
+
+The idea of AUTOSAVE is to avoid having to edit any configuration files. You
+configure the ports needed using "setserial" directly, and changes you
+make are automatically saved on halt or shutdown for use next time. To
+ensure a change is saves, all that is required is that the port has its
+UART entry set to something other than "unknown". Setting it to "unknown"
+will result in the entry being deleted from /etc/serial.conf when the state
+is saved. However, if you have a bootup problem (like serial.o could not
+load due to a kernel update), the serial configuration will be lost. Eventually
+the kernel-detected ports will appear in the serial.conf file, but not other
+hand-crafted entries. AUTOSAVE-ONCE is propably best, put into the first line
+whenever you actually want changes to be made.
+
+If the serial module is
+unloaded from the kernel (perhaps because you have not used it for a few minutes
+and then it is reloaded), all changes you have made to the serial configuration
+are not reloaded by the serial module. Instead, setserial stores the
+state on an unload in /var/run/setserial.conf, and reloads the state
+as stored when the module reloads. If you have in serial.conf AUTOSAVE,
+it will also save the current state of the ports whenever you reboot.
+
+Aparently setserial will not save some ports properly, and under those
+circumstances you must do everything by hand in /etc/serial.conf. For
+details about this file see the /usr/share/doc/setserial directory for
+some examples.
+
+To delete an entry from the auto managed setserial data (say /dev/ttyS3), do
+/sbin/setserial /dev/ttyS3 uart unknown
+/etc/init.d/setserial stop
+
+To restore your settings as of the last save, do
+/etc/init.d/setserial start
+(Note that this will not delete ports you have created which do not appear in
+ the internal serial configuration file, but instead reconfigures ports
+it knows about and adds in any not yet configured)
+
+For some reason, pcmcia serial-based ports are controlled using pcmcia-cs,
+not setserial. Extensive filtering is in setserial to ensure that no
+status is ever saved (as of 2.15-7) which belongs to a pcmcia device.
+As of 2.17-4, this was changed so that, rather than filtering such things
+out, setserial now reports "pcmcia" for the device. However, you should
+not be using setserial to control or even monitor pcmcia serial ports.
+This reporting of pcmcia control by setserial is to allow pcmcia-cs
+to work correctly.
+
+If for some reason pcmcia-based serial configuration is appearing in
+the auto part of the serial configuration (and a good indication of this
+is that your pcmcia-based
+port is changing device names on every reboot until its installation fails)
+could you please email me the /var/lib/setserial/autoserial.conf file, the
+contents of /var/run/stab, and the output of "cardctl config", as I cannot
+understand why this is still a problem...
+
+If you had a version of 2.15 less than -7 in your system, and you have
+pcmcia problems, read the "pcmcia.repair" file.
+
+
+----------------------------------
+
+When the serial.o module is loaded (or is hard-coded) the options under
+which is was compiled should be visible. Often on a standard kernel
+you get something like:
+
+Serial driver version 4.27 with no serial options enabled
+
+With no serial options enabled, you only get 4 serial ports in the kernel,
+no matter how many you try to use in setserial. These are numbered 0 to
+3. You cannot use numbers larger than 3 without recompiling the kernel.
+The number of the port is in itself irrelevent, so do not feel that a
+particular number is essential to get things to work. Users converting from
+other distributions may be confused, as port 13 or 14 seem to have been
+chosen automatically for them by their old distribution, but in reality
+this could have easily have been port 2. In standard systems, port 0 and 1
+are the two motherboard serial devices, and 3 and 4 are unused.
+
+----------------------------------
+
+Gordon.

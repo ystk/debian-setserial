@@ -1,0 +1,254 @@
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# , fuzzy
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: setserial 2.17-42\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: 2008-09-28 22:00+0100\n"
+"Last-Translator: Martin Bagge <brother@bsnet.se>\n"
+"Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "Konfigurera parametrar för serieporten automatiskt?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"Rekomendationen är att parameterarna för serieporten konfigureras "
+"automatiskt. De kan konfigureras manuellt genom att ändra i filen /etc/"
+"serial.conf."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"Seriella enheter av PCMCIA-typ ska ställas in med pcmciautils. Läs vidare "
+"i /usr/share/doc/setserial/README.Debian.gz."
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "spara automatiskt en gång"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "manuell"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "spara automatiskt varje gång"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "kärna"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "Typ av automatisk seriellportskonfiguration:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr "Setserial kan spara aktuella inställningar på en mängd olika sätt:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+" spara automatiskt en gång    : spara en gång, nu\n"
+" manuell                      : sparar aldrig inställningara automatiskt\n"
+" spara automatiskt varje gång : sparar inställningarna vid varje nedstä"
+"ngning\n"
+"                                av systemet (med risk för att instä"
+"llningsfilen\n"
+"                                skrivs över med felaktiga inställningar);\n"
+" kärna                        : använder kärnans inställningar vid "
+"uppstart.."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "Fel vid inställning av setserial i update-modules."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"Setserial försökte  installera kod för modulhantering för att ge stöd "
+"för att ladda in och ladda ur modulen serial.o dynamiskt av kärnans "
+"modulladdare."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"Försöket misslyckades. Felet kan bero på en icke-standardiserad "
+"modulkonfiguration och kan lösas manuellt genom att köra '/sbin/update-"
+"modules'."
+
+#~ msgid "Please read documentation on old 0setserial entries"
+#~ msgstr "L�s dokumentationen om gamla 0setserial"
+
+#~ msgid ""
+#~ "You have an old-style 0setserial entry. The configuration mechanism has "
+#~ "changed completely after setserial release 2.14."
+#~ msgstr ""
+#~ "Du har en gammal 0setserial. Konfigurationsmekanismen har �ndrats "
+#~ "totalt efter setserial version 2.14."
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
+#~ "2.15."
+#~ msgstr ""
+#~ "Din gamla fil /etc/rc.boot/0setserial har just bytt namn till 0setserial."
+#~ "pre-2.15."
+
+#~ msgid ""
+#~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."
+#~ msgstr ""
+#~ "L�s filen /usr/share/doc/setserial/README.Debian.gz f�r mer "
+#~ "information."
+
+#~ msgid "New method of bootup initialization used"
+#~ msgstr "Ny metod anv�nds f�r initiering vid uppstart"
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was removed. The /etc/init.d/"
+#~ "setserial file is used instead."
+#~ msgstr ""
+#~ "Din gamla fil /etc/rc.boot/0setserial har tagits bort. Filen /etc/init.d/"
+#~ "setserial anv�nds ist�llet."
+
+#~ msgid "Do you want the automatic serial port configuration?"
+#~ msgstr "Vill du anv�nda den automatiska seriellportskonfigurationen?"
+
+#~ msgid ""
+#~ "All releases of setserial since 2.15 use the file /etc/serial.conf to "
+#~ "configure the serial ports. You can edit it to your own likings, or use "
+#~ "the automatic serial port configuration, which is the recommended way of "
+#~ "doing it."
+#~ msgstr ""
+#~ "Alla versioner av setserial sedan 2.15 anv�nder filen /etc/setserial."
+#~ "conf f�r att konfigurera seriellportarna. Du kan �ndra den efter dina "
+#~ "�nskem�l eller anv�nda den automatiska seriellportskonfigurationen, "
+#~ "som �r det rekommenderade s�ttet att g�ra detta."
+
+#~ msgid ""
+#~ "Attention PCMCIA users - pcmcia-cs has its own configuration for PC Card "
+#~ "serial-type devices, which is not compatible with setserial. In case of "
+#~ "problems, please read the /usr/share/doc/setserial/README.Debian.gz file."
+#~ msgstr ""
+#~ "Lystring PCMCIA-anv�ndare - pcmcia-cs har sin egen konfiguration f�r "
+#~ "PC Card seriellenheter som inte �r kompatibel med setserial. Vid "
+#~ "problem, l�s i filen /usr/share/doc/setserial/README.Debian.gz."
+
+#~ msgid "autosave once, manual, autosave always, kernel"
+#~ msgstr "autospara en g�ng, manuellt, autospara alltid, k�rna"
+
+#~ msgid ""
+#~ "Setserial contains the ability to save your current serial "
+#~ "configurations, but you have to decide the method which setserial is to "
+#~ "use."
+#~ msgstr ""
+#~ "Setserial har m�jligheten att spara dina nuvarande "
+#~ "seriellkonfigurationer men du m�ste avb�ja den metod som setserial "
+#~ "ska anv�nda."
+
+#~ msgid ""
+#~ "autosave once - this saves your serial configuration the first time you "
+#~ "select this option, using kernel information. From this point on this "
+#~ "information is never changed automatically again. If you want the "
+#~ "configuration to change you have to edit serial.conf by hand. This is the "
+#~ "default and is good in almost all cases."
+#~ msgstr ""
+#~ "autospara en g�ng - detta sparar din seriellkonfiguration fr�n "
+#~ "f�rsta g�ngen du v�ljer denna inst�llning med informationen i "
+#~ "k�rnan. Fr�n denna punkt fram�t �ndrar sig inte konfigurationen "
+#~ "igen. Om du vill �ndra konfigurationen m�ste du �ndra serial.conf "
+#~ "f�r hand. Detta �r standardvalet och passar i de flesta fall."
+
+#~ msgid ""
+#~ "manual - control serial.conf yourself right from the start. Good for "
+#~ "experts who like to get their hands dirty, but autosave-once is probably "
+#~ "still better."
+#~ msgstr ""
+#~ "manuellt - kontrollera serial.conf sj�lv fr�n b�rjan. Bra f�r "
+#~ "experter som gillar att f� sina h�nder skitiga men \"autospara en "
+#~ "g�ng\" �r antagligen b�ttre."
+
+#~ msgid ""
+#~ "autosave always - save the serial configuration on every system shutdown, "
+#~ "and reload the saved state when you reboot. Good if you change your "
+#~ "serial configuration a lot, but DANGEROUS as rebooting a system with "
+#~ "\"errors\" can result in the complete loss of your serial configuration!"
+#~ msgstr ""
+#~ "autospara alltid - sparar seriellkonfigurationen vid varje avst�ngning "
+#~ "av systemet och laddar in den sparade statusen n�r du startar upp. Bra "
+#~ "om du �ndrar din seriellkonfiguration ofta men FARLIG eftersom "
+#~ "uppstarter av systemet med felaktigheter kan resultera i att din "
+#~ "seriellkonfiguration f�rloras!"
+
+#~ msgid ""
+#~ "kernel - blank the serial.conf file and use the kernel settings on "
+#~ "bootup. This may be useful for standard situations or where setserial has "
+#~ "become confused."
+#~ msgstr ""
+#~ "k�rna - t�mmer filen serial.conf och anv�nder k�rnans "
+#~ "inst�llningar vid uppstart. Denna kan vara anv�ndbar f�r "
+#~ "standardsituationer eller d�r setserial har blivit f�rvirrad."
+
+#~ msgid "update-modules failed!"
+#~ msgstr "update-modules misslyckades!"

@@ -1,0 +1,36 @@
+34c34
+< ports to a nonstadard configuration, the
+---
+> ports to a nonstandard configuration, the
+112c112
+< All argument values are assumed to be in decimal unless preceeded by "0x".
+---
+> All argument values are assumed to be in decimal unless preceded by "0x".
+181c181
+< imitations instead.  Some of these cheasy imitations UART's do not
+---
+> imitations instead.  Some of these cheesy imitations UART's do not
+228c228
+< This option sets the custom divison.  This divisor will be used then the
+---
+> This option sets the custom divisor.  This divisor will be used when the
+286c286
+< Notify a process blocked on opening a dial in line when a process has
+---
+> Notify a process blocked on opening a dialin line when a process has
+291c291
+< a serial port's dial in line.  This allows the getty to reset the
+---
+> a serial port's dialin line.  This allows the getty to reset the
+296c296
+< Do not notify a process blocked on opening a dial in line when the
+---
+> Do not notify a process blocked on opening a dialin line when the
+319c319
+< latency before characters are handed off to the line discpline to
+---
+> latency before characters are handed off to the line discipline to
+408c408
+< IRQ 12      Reserved (Auxillary device in PS/2)
+---
+> IRQ 12      Reserved (Auxiliary device in PS/2)

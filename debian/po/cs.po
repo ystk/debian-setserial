@@ -1,0 +1,239 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: setserial\n"
+"Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
+"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"PO-Revision-Date: 2008-02-19 19:57+0100\n"
+"Last-Translator: Miroslav Kure <kurem@upcase.inf.upol.cz>\n"
+"Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid "Automatically configure the serial port parameters?"
+msgstr "Nastavit parametry sériových portů automaticky?"
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"It is recommended that the serial port parameters should be configured "
+"automatically. It is also possible to configure them manually by editing the "
+"file /etc/serial.conf."
+msgstr ""
+"Parametry sériových portů je doporučeno nastavit automaticky, nicméně pokud "
+"chcete, můžete je nastavit také ručně v souboru /etc/serial.conf."
+
+#. Type: boolean
+#. Description
+#: ../templates:2001
+msgid ""
+"PCMCIA serial-type devices should be configured with pcmciautils. See /usr/"
+"share/doc/setserial/README.Debian.gz for details."
+msgstr ""
+"Sériová zařízení typu PCMCIA by se měla nastavovat pomocí pcmciautils. "
+"Podrobnosti naleznete v /usr/share/doc/setserial/README.Debian.gz."
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave once"
+msgstr "uložit jednou"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "manual"
+msgstr "ručně"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "autosave always"
+msgstr "ukládat vždy"
+
+#. Type: select
+#. Choices
+#: ../templates:3001
+msgid "kernel"
+msgstr "jádro"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid "Type of automatic serial port configuration:"
+msgstr "Způsob automatického nastavení sériových portů:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+"Setserial allows saving the current serial configuration in various ways:"
+msgstr "Setserial umožňuje uložit aktuální nastavení několika způsoby:"
+
+#. Type: select
+#. Description
+#: ../templates:3002
+msgid ""
+" autosave once  : save only once, now;\n"
+" manual         : never save the configuration automatically;\n"
+" autosave always: save on every system shutdown (risks overwriting the\n"
+"                  serial.conf file with errors);\n"
+" kernel         : do not use the serial.conf file and use the kernel "
+"settings\n"
+"                  at bootup."
+msgstr ""
+" uložit jednou: uloží nastavení pouze nyní;\n"
+" ručně        : nastavení nikdy neuloží automaticky;\n"
+" ukládat vždy : uloží při každém vypnutí systému (riziko přepsání\n"
+"                souboru serial.conf chybnými údaji);\n"
+" jádro        : nepoužije soubor serial.conf, ale nastavení jádra\n"
+"                při zavádění systému."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid "Error during update-modules configuration for setserial"
+msgstr "Chyba během update-modules"
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"The setserial configuration process tried to install the module management "
+"code to support the serial.o module being loaded and unloaded dynamically by "
+"the kernel module loader."
+msgstr ""
+"Konfigurační proces setserialu se pokusil nainstalovat kód pro správu "
+"modulů, který by umožňoval dynamické nahrávání a uvolňování modulu serial.o "
+"pomocí jaderného zavaděče modulů."
+
+#. Type: error
+#. Description
+#: ../templates:4001
+msgid ""
+"This process failed. This may be caused by a non-standard module "
+"configuration and should be solved manually by running '/sbin/update-"
+"modules'."
+msgstr ""
+"Instalace selhala. Mohlo to být způsobeno nestandardní konfigurací modulů. "
+"Můžete zkusit ručně spustit příkaz „/sbin/update-modules“."
+
+#~ msgid "Please read documentation on old 0setserial entries"
+#~ msgstr "Přečtěte si prosím dokumentaci ke starým záznamům 0setserial"
+
+#~ msgid ""
+#~ "You have an old-style 0setserial entry. The configuration mechanism has "
+#~ "changed completely after setserial release 2.14."
+#~ msgstr ""
+#~ "Záznam 0setserial máte podle starého stylu. Konfigurační mechanizmus se "
+#~ "po verzi 2.14 úplně změnil."
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
+#~ "2.15."
+#~ msgstr ""
+#~ "Váš starý soubor /etc/rc.boot/0setserial byl přejmenován na 0setserial."
+#~ "pre-2.15."
+
+#~ msgid ""
+#~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."
+#~ msgstr ""
+#~ "Pro více informací si přečtěte soubor /usr/share/doc/setserial/README."
+#~ "Debian.gz."
+
+#~ msgid "New method of bootup initialization used"
+#~ msgstr "Používá se nová metoda inicializace při startu"
+
+#~ msgid ""
+#~ "Your old /etc/rc.boot/0setserial file was removed. The /etc/init.d/"
+#~ "setserial file is used instead."
+#~ msgstr ""
+#~ "Váš starý soubor /etc/rc.boot/0setserial byl odstraněn. Místo něj se "
+#~ "používá soubor /etc/init.d/setserial."
+
+#~ msgid ""
+#~ "All releases of setserial since 2.15 use the file /etc/serial.conf to "
+#~ "configure the serial ports. You can edit it to your own likings, or use "
+#~ "the automatic serial port configuration, which is the recommended way of "
+#~ "doing it."
+#~ msgstr ""
+#~ "Všechny verze setserial od 2.15 používají pro nastavení sériových portů "
+#~ "soubor /etc/serial.conf. Můžete si jej upravit podle svého, nebo použít "
+#~ "automatickou konfiguraci sériových portů, která je doporučeným způsobem "
+#~ "nastavení."
+
+#~ msgid ""
+#~ "Attention PCMCIA users - pcmcia-cs has its own configuration for PC Card "
+#~ "serial-type devices, which is not compatible with setserial. In case of "
+#~ "problems, please read the /usr/share/doc/setserial/README.Debian.gz file."
+#~ msgstr ""
+#~ "Upozornění pro uživatele PCMCIA - pcmcia-cs má vlastní konfiguraci PC "
+#~ "Card sériových zařízení, která není kompatibilní se setserial. V případě "
+#~ "problémů si přečtěte soubor /usr/share/doc/setserial/README.Debian.gz."
+
+#~ msgid ""
+#~ "Setserial contains the ability to save your current serial "
+#~ "configurations, but you have to decide the method which setserial is to "
+#~ "use."
+#~ msgstr ""
+#~ "Setserial má schopnost uložit vaše aktuální nastavení sériových portů, "
+#~ "ale musíte se rozhodnout pro metodu, kterou má používat."
+
+#~ msgid ""
+#~ "autosave once - this saves your serial configuration the first time you "
+#~ "select this option, using kernel information. From this point on this "
+#~ "information is never changed automatically again. If you want the "
+#~ "configuration to change you have to edit serial.conf by hand. This is the "
+#~ "default and is good in almost all cases."
+#~ msgstr ""
+#~ "automaticky uložit jednou - uloží nastavení poprvé kdy vyberete tuto "
+#~ "možnost, s použitím informací z jádra. Z tohoto pohledu nebude toto "
+#~ "nastavení nikdy automaticky změněno. Pokud budete chtít nastavení změnit, "
+#~ "budete muset upravit serial.conf ručně. Toto je výchozí volba a je dobrá "
+#~ "v téměř všech případech."
+
+#~ msgid ""
+#~ "manual - control serial.conf yourself right from the start. Good for "
+#~ "experts who like to get their hands dirty, but autosave-once is probably "
+#~ "still better."
+#~ msgstr ""
+#~ "ručně - mějte serial.conf od začátku pod vlastní kontrolou. Dobrá volba "
+#~ "pro experty, kteří si rádi ušpiní ruce, ale první automatické uložení je "
+#~ "pravděpodobně stejně lepší."
+
+#~ msgid ""
+#~ "autosave always - save the serial configuration on every system shutdown, "
+#~ "and reload the saved state when you reboot. Good if you change your "
+#~ "serial configuration a lot, but DANGEROUS as rebooting a system with "
+#~ "\"errors\" can result in the complete loss of your serial configuration!"
+#~ msgstr ""
+#~ "automaticky uložit vždy - uložit nastavení při každém vypnutí systému a "
+#~ "načíst uložený stav po restartu. Dobrá volba pokud často měníte nastavení "
+#~ "sériových portů, ale NEBEZPEČNÁ, protože restartování systému s \"chybami"
+#~ "\" může způsobit úplnou ztrátu vašich nastavení sériových portů!"
+
+#~ msgid ""
+#~ "kernel - blank the serial.conf file and use the kernel settings on "
+#~ "bootup. This may be useful for standard situations or where setserial has "
+#~ "become confused."
+#~ msgstr ""
+#~ "jádro - vyprázdnit soubor serial.conf a při startu používat nastavení "
+#~ "jádra. Toto může být užitečné pro standardní situace nebo kde je "
+#~ "setserial zmaten."
