@@ -1,7 +1,6 @@
-#!/bin/sh /usr/share/dpatch/dpatch-run
-## DP: setserial rc.etc-serial patch
+From: Jonas Genannt <jonas.genannt@capi2name.de>
+Subject: setserial rc.etc-serial patch
 
-@DPATCH@
 
 diff -Naurp setserial-2.17.orig/rc.etc-setserial setserial-2.17/rc.etc-setserial
 --- setserial-2.17.orig/rc.etc-setserial	1970-01-01 00:00:00.000000000 +0000
@@ -14,7 +13,7 @@ diff -Naurp setserial-2.17.orig/rc.etc-setserial setserial-2.17/rc.etc-setserial
 +# Required-Start:       checkfs
 +# Required-Stop:        $remote_fs
 +# Default-Start:        S
-+# Default-Stop:         0 6
++# Default-Stop:         0 1 6
 +# Short-Description:    controls configuration of serial ports
 +# Description:          Set and/or report the configuration information
 +#                       associated with a serial port. This information

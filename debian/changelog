@@ -1,3 +1,22 @@
+setserial (2.17-47) unstable; urgency=low
+
+  * QA upload.
+  * Remove deprecated dpatch and upgrade to packaging format "3.0 quilt"
+    (Closes: #664320).
+  * Update to Standards-Version to 3.9.3.1 and debhelper to 9.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 28 Mar 2012 22:16:35 +0300
+
+setserial (2.17-46) unstable; urgency=low
+
+  * Added README.source
+  * Changed obsolete dpkg option (Closes: #566105)
+  * Added Italian translation (Closes: #556032, #627138)
+  * new standards version
+  * orphaned package
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sat, 11 Jun 2011 11:56:18 +0200
+
 setserial (2.17-45.3) unstable; urgency=low
 
   * Non-maintainer upload.
@@ -1074,7 +1093,3 @@ setserial (2.10-1) unstable; urgency=low
   * Initial Release.
 
  -- Gordon Russell <g.russell@dcs.napier.ac.uk>  Wed, 22 Jan 1997 11:22:25 +0000
-
-Local variables:
-mode: debian-changelog
-End:

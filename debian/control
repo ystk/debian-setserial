@@ -1,10 +1,9 @@
 Source: setserial
 Section: comm
 Priority: extra
-Maintainer: Jonas Genannt <jonas.genannt@capi2name.de>
-Uploaders: Ola Lundqvist <opal@debian.org>
-Build-Depends: debhelper (>= 5), autotools-dev, po-debconf, dpatch
-Standards-Version: 3.8.0
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper (>= 9), autotools-dev, po-debconf
+Standards-Version: 3.9.3.1
 
 Package: setserial
 Architecture: any

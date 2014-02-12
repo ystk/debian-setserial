@@ -2,13 +2,12 @@
 # Copyright 1994,1995 by Ian Jackson, 1998 Christoph Lameter
 # debian/rules for setserial, by Gordon Russell.
 
-include /usr/share/dpatch/dpatch.make
 
 DESTDIR = $(CURDIR)/debian/setserial
 arch = $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 
 build: stamp-build
-stamp-build: patch-stamp
+stamp-build:
 	dh_testdir
 ifneq "$(wildcard /usr/share/misc/config.sub)" ""
 	cp -f /usr/share/misc/config.sub config.sub
@@ -28,7 +27,7 @@ endif
 	$(MAKE) setserial CFLAGS="-O2"
 	touch $@
 
-clean: unpatch
+clean:
 	dh_testdir
 	dh_testroot
 	rm -f config.sub config.guess
@@ -36,17 +35,20 @@ clean: unpatch
 	rm -f gorhack.h setserial.8
 	dh_clean stamp-build
 
+build-arch: build
+build-indep: build
+
 binary-indep:
 # There are no architecture-independent packages here.
 
 binary-arch: build
 	dh_testdir
 	dh_testroot
-	dh_clean -k
+	dh_prep
 
 	dh_installdirs
 	install -g root -m 755 -o root setserial   $(DESTDIR)/bin
-	install -g root -m 644 -o root    setserial.8 \
+	install -g root -m 644 -o root	  setserial.8 \
 		$(DESTDIR)/usr/share/man/man8/setserial.8
 	echo ${arch}
 	if [ "${arch}" = "m68k" ] ; then \

@@ -1,7 +1,6 @@
-#!/bin/sh /usr/share/dpatch/dpatch-run
-## DP: setserial Makefile patch
+From: Jonas Genannt <jonas.genannt@capi2name.de>
+Subject: setserial Makefile patch
 
-@DPATCH@
 
 diff -Naurp setserial-2.17.orig/Makefile.in setserial-2.17/Makefile.in
 --- setserial-2.17.orig/Makefile.in	2008-09-26 21:59:11.000000000 +0000

@@ -1,7 +1,6 @@
-#!/bin/sh /usr/share/dpatch/dpatch-run
-## DP: setserial rc.serial.upstream patch
+From: Jonas Genannt <jonas.genannt@capi2name.de>
+Subject: setserial rc.serial.upstream patch
 
-@DPATCH@
 
 diff -Naurp setserial-2.17.orig/rc.serial.upstream setserial-2.17/rc.serial.upstream
 --- setserial-2.17.orig/rc.serial.upstream      1970-01-01 00:00:00.000000000 +0000

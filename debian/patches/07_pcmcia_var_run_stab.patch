@@ -1,7 +1,6 @@
-#!/bin/sh /usr/share/dpatch/dpatch-run
-## DP: setserial pcmcia var_run_stab patch
+From: Jonas Genannt <jonas.genannt@capi2name.de>
+Subject: setserial pcmcia var_run_stab patch
 
-@DPATCH@
 
 diff -Naurp setserial-2.17.orig/pcmcia/var_run_stab setserial-2.17/pcmcia/var_run_stab
 --- setserial-2.17.orig/pcmcia/var_run_stab	1970-01-01 00:00:00.000000000 +0000
