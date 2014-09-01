@@ -1,0 +1,4 @@
+version=3
+opts=pasv \
+ftp://ftp.mcc.ac.uk/pub/linux/sources/sbin/setserial-(.+)\.tar\.gz 
+

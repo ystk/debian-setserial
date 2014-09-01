@@ -12,7 +12,7 @@ diff -Naurp setserial-2.17.orig/rc.serial.m68k setserial-2.17/rc.serial.m68k
 +# Required-Start:	$remote_fs
 +# Required-Stop:	$remote_fs
 +# Default-Start:	S
-+# Default-Stop:		0 6
++# Default-Stop:		0 1 6
 +# Short-Description:    controls configuration of serial ports
 +# Description:          Set and/or report the configuration information
 +#                       associated with a serial port. This information

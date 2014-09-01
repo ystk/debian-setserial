@@ -21,15 +21,16 @@ fi
 if [ -f /usr/share/debconf/confmodule ]; then # debconf exists
 . /usr/share/debconf/confmodule
 
- if [ -x /sbin/update-modules ]; then
-  #db_get setserial/usemodup
-  #if [ "$RET" = "true" ]; then
-   if ! /sbin/update-modules ; then
-    # cannot easily tell the user there was a problem, so silently ignore it
-    WHOCARES=0;
-   fi
-  #fi
- fi
+# HHH update-modules removed
+# if [ -x /sbin/update-modules ]; then
+#  #db_get setserial/usemodup
+#  #if [ "$RET" = "true" ]; then
+#   if ! /sbin/update-modules ; then
+#    # cannot easily tell the user there was a problem, so silently ignore it
+#    WHOCARES=0;
+#   fi
+#  #fi
+# fi
 fi
 #ENDOF DEBCONF
 

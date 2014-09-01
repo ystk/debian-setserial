@@ -2,10 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: setserial\n"
 "Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"POT-Creation-Date: 2012-06-19 15:40+0200\n"
 "PO-Revision-Date: 2008-02-08 00:18+0200\n"
 "Last-Translator: Esko Arajärvi <edu@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,31 +98,23 @@ msgstr ""
 "                  virheellisten tietojen kirjoitus serial.conf:iin)\n"
 " ydin:            älä käytä tiedostoa serial.conf vaan ytimen asetuksia"
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid "Error during update-modules configuration for setserial"
-msgstr "Virhe tehtäessä update-modules-asetuksia setserialille"
+#~ msgid "Error during update-modules configuration for setserial"
+#~ msgstr "Virhe tehtäessä update-modules-asetuksia setserialille"
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"The setserial configuration process tried to install the module management "
-"code to support the serial.o module being loaded and unloaded dynamically by "
-"the kernel module loader."
-msgstr ""
-"Setserialin asetusprosessi yritti asentaa moduulinhallintakoodia lisätäkseen "
-"ytimen moduulienlataajaan tuen moduulin serial.o lataamiselle ja "
-"poistamiselle dynaamisesti."
+#~ msgid ""
+#~ "The setserial configuration process tried to install the module "
+#~ "management code to support the serial.o module being loaded and unloaded "
+#~ "dynamically by the kernel module loader."
+#~ msgstr ""
+#~ "Setserialin asetusprosessi yritti asentaa moduulinhallintakoodia "
+#~ "lisätäkseen ytimen moduulienlataajaan tuen moduulin serial.o lataamiselle "
+#~ "ja poistamiselle dynaamisesti."
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"This process failed. This may be caused by a non-standard module "
-"configuration and should be solved manually by running '/sbin/update-"
-"modules'."
-msgstr ""
-"Tämä prosessi epäonnistui. Tämän saattoi aiheuttaa epästandardit "
-"moduuliasetukset. Ongelma tulisi ratkaista ajamalla ”/sbin/update-modules”."
+#~ msgid ""
+#~ "This process failed. This may be caused by a non-standard module "
+#~ "configuration and should be solved manually by running '/sbin/update-"
+#~ "modules'."
+#~ msgstr ""
+#~ "Tämä prosessi epäonnistui. Tämän saattoi aiheuttaa epästandardit "
+#~ "moduuliasetukset. Ongelma tulisi ratkaista ajamalla ”/sbin/update-"
+#~ "modules”."

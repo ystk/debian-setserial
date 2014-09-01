@@ -1,3 +1,4 @@
+# 20120618, ta, not used anymore, kept for historical reasons
 #
 # This is what I wanted to do, but logger is in /usr/bin, which isn't loaded
 # when the module is first loaded into the kernel at boot time!

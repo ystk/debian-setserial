@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"POT-Creation-Date: 2012-06-19 15:40+0200\n"
 "PO-Revision-Date: 2009-11-05 14:51+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -112,34 +112,25 @@ msgstr ""
 " kerne          : brug ikke filen serial.conf men brug kerneopsætningen\n"
 "                  ved opstart."
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid "Error during update-modules configuration for setserial"
-msgstr "Fejl under konfiguration af opdateringsmoduler for setserial"
+#~ msgid "Error during update-modules configuration for setserial"
+#~ msgstr "Fejl under konfiguration af opdateringsmoduler for setserial"
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"The setserial configuration process tried to install the module management "
-"code to support the serial.o module being loaded and unloaded dynamically by "
-"the kernel module loader."
-msgstr ""
-"Setserialkonfigurationen forsøgte at installere understøttelse for "
-"modulhåndtering for at understøtte dynamisk indlæsning og fjernelse af "
-"modulet serial.o fra kernelmodulindlæseren."
+#~ msgid ""
+#~ "The setserial configuration process tried to install the module "
+#~ "management code to support the serial.o module being loaded and unloaded "
+#~ "dynamically by the kernel module loader."
+#~ msgstr ""
+#~ "Setserialkonfigurationen forsøgte at installere understøttelse for "
+#~ "modulhåndtering for at understøtte dynamisk indlæsning og fjernelse af "
+#~ "modulet serial.o fra kernelmodulindlæseren."
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"This process failed. This may be caused by a non-standard module "
-"configuration and should be solved manually by running '/sbin/update-"
-"modules'."
-msgstr ""
-"Denne proces mislykkedes. Dette kan skyldes et modul, der ikke er standard, "
-"og bør løses manuelt ved at køre '/sbin/update-modules'."
+#~ msgid ""
+#~ "This process failed. This may be caused by a non-standard module "
+#~ "configuration and should be solved manually by running '/sbin/update-"
+#~ "modules'."
+#~ msgstr ""
+#~ "Denne proces mislykkedes. Dette kan skyldes et modul, der ikke er "
+#~ "standard, og bør løses manuelt ved at køre '/sbin/update-modules'."
 
 #~ msgid "Please read documentation on old 0setserial entries"
 #~ msgstr "Læs dokumentationen om gamle 0setserial-indgange"

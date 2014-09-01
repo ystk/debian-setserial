@@ -15,16 +15,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.17-45\n"
 "Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"POT-Creation-Date: 2012-06-19 15:40+0200\n"
 "PO-Revision-Date: 2008-02-07 20:50+0300\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
@@ -113,35 +114,26 @@ msgstr ""
 " из параметров ядра:         не использовать файл serial.conf,\n"
 "                             применять настройки ядра при загрузке"
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid "Error during update-modules configuration for setserial"
-msgstr "Ошибка при работе update-modules по настройке setserial"
+#~ msgid "Error during update-modules configuration for setserial"
+#~ msgstr "Ошибка при работе update-modules по настройке setserial"
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"The setserial configuration process tried to install the module management "
-"code to support the serial.o module being loaded and unloaded dynamically by "
-"the kernel module loader."
-msgstr ""
-"В процессе настройки setserial была попытка установить модуль управления "
-"кодом для динамической загрузки и выгрузки модуля serial.o с помощью "
-"ядерного загрузчика модулей."
+#~ msgid ""
+#~ "The setserial configuration process tried to install the module "
+#~ "management code to support the serial.o module being loaded and unloaded "
+#~ "dynamically by the kernel module loader."
+#~ msgstr ""
+#~ "В процессе настройки setserial была попытка установить модуль управления "
+#~ "кодом для динамической загрузки и выгрузки модуля serial.o с помощью "
+#~ "ядерного загрузчика модулей."
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"This process failed. This may be caused by a non-standard module "
-"configuration and should be solved manually by running '/sbin/update-"
-"modules'."
-msgstr ""
-"Процесс завершился неудачно. Вероятно, в настройках модуля содержатся какие-"
-"то нестандартные параметры. Попробуйте запустить '/sbin/update-modules' "
-"вручную."
+#~ msgid ""
+#~ "This process failed. This may be caused by a non-standard module "
+#~ "configuration and should be solved manually by running '/sbin/update-"
+#~ "modules'."
+#~ msgstr ""
+#~ "Процесс завершился неудачно. Вероятно, в настройках модуля содержатся "
+#~ "какие-то нестандартные параметры. Попробуйте запустить '/sbin/update-"
+#~ "modules' вручную."
 
 #~ msgid "Please read documentation on old 0setserial entries"
 #~ msgstr ""
@@ -155,11 +147,11 @@ msgstr ""
 #~ "setserial версии 2.14 механизм настроек был полностью изменён."
 
 #~ msgid ""
-#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
-#~ "2.15."
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial."
+#~ "pre-2.15."
 #~ msgstr ""
-#~ "Ваш старый файл /etc/rc.boot/0setserial был переименован в 0setserial.pre-"
-#~ "2.15."
+#~ "Ваш старый файл /etc/rc.boot/0setserial был переименован в 0setserial."
+#~ "pre-2.15."
 
 #~ msgid ""
 #~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."

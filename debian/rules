@@ -5,6 +5,10 @@
 
 DESTDIR = $(CURDIR)/debian/setserial
 arch = $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 
 build: stamp-build
 stamp-build:
@@ -24,7 +28,7 @@ endif
 	else \
 	  echo "#undef __mc68000__" > gorhack.h ; \
 	fi
-	$(MAKE) setserial CFLAGS="-O2"
+	$(MAKE) setserial CFLAGS="-O2 $(CFLAGS)" LDFLAGS="$(LDFLAGS)" CPPFLAGS="$(CPPFLAGS)" CXXFLAGS="$(CXXFLAGS)"
 	touch $@
 
 clean:
@@ -62,7 +66,7 @@ binary-arch: build
 	  install -g root -m 755 -o root  rc.etc-setserial \
 		$(DESTDIR)/etc/init.d/etc-setserial ; \
 	  install -g root -m 644 -o root    serial.conf $(DESTDIR)/usr/share/doc/setserial/serial.conf ;\
-	  install -g root -m 644 -o root    debian/setserial.modutils $(DESTDIR)/etc/modutils/setserial ;\
+	  # #518313, not used anymore: install -g root -m 644 -o root    debian/setserial.modutils $(DESTDIR)/etc/modutils/setserial ;\
 	fi
 	if [ "${arch}" = "sparc" ] ; then \
 	  install -g root -m 644 -o root    serial.conf.sparc $(DESTDIR)/usr/share/doc/setserial/serial.conf ;\
@@ -82,3 +86,7 @@ binary-arch: build
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary binary-arch binary-indep
+
+get-orig-source:
+	mkdir -p ../tarballs
+	uscan --verbose --force-download --destdir=../tarballs

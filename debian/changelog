@@ -1,3 +1,22 @@
+setserial (2.17-48) unstable; urgency=low
+
+  * new maintainer (Closes: #636122)
+  * debian/watch: added
+  * debian/rules: add hardening flags
+  * debian/rules: modutils disappeared from Debian (Closes: #518313)
+  * debian/rules: target get-orig-source added
+  * debian/config: set -e moved from header to body of script
+  * debian/postinst: set -e moved from header to body of script
+  * debian/postinst: use default runlevel arguments for start and stop
+  * debian/post*: do not use update-modules anymore (Closes: #468420)
+  * debian/patches: add hardening flags
+  * debian/patches: change /etc/init.d/setserial to properly report 
+                    handling by kernel (Closes: #375276)
+  * debian/patches: add status parameter for rc-files
+  * debian/control: add some kind of homepage
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Mon, 02 Jul 2012 18:00:00 +0200
+
 setserial (2.17-47) unstable; urgency=low
 
   * QA upload.

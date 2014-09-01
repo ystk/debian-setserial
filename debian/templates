@@ -32,13 +32,15 @@ _Description: Type of automatic serial port configuration:
   kernel         : do not use the serial.conf file and use the kernel settings
                    at bootup.
 
-Template: setserial/update-modules-failed
-Type: error
-_Description: Error during update-modules configuration for setserial
- The setserial configuration process tried to install the module
- management code to support the serial.o module being loaded and
- unloaded dynamically by the kernel module loader.
- .
- This process failed. This may be caused by a non-standard module
- configuration and should be solved manually by running
- '/sbin/update-modules'.
+# HHH as there is no more update-modules available, this template
+#     can be removed
+#Template: setserial/update-modules-failed
+#Type: error
+#_Description: Error during update-modules configuration for setserial
+# The setserial configuration process tried to install the module
+# management code to support the serial.o module being loaded and
+# unloaded dynamically by the kernel module loader.
+# .
+# This process failed. This may be caused by a non-standard module
+# configuration and should be solved manually by running
+# '/sbin/update-modules'.

@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: setserial 2.17-45\n"
 "Report-Msgid-Bugs-To: setserial@packages.debian.org\n"
-"POT-Creation-Date: 2008-04-28 09:20+0200\n"
+"POT-Creation-Date: 2012-06-19 15:40+0200\n"
 "PO-Revision-Date: 2008-02-07 19:38+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,7 +43,8 @@ msgid ""
 "share/doc/setserial/README.Debian.gz for details."
 msgstr ""
 "Các thiết bị kiểu nối tiếp PCMCIA nên được cấu hình dùng pcmciautils. Xem "
-"tài liệu Đọc Đi « /usr/share/doc/setserial/README.Debian.gz » để tìm chi tiết."
+"tài liệu Đọc Đi « /usr/share/doc/setserial/README.Debian.gz » để tìm chi "
+"tiết."
 
 #. Type: select
 #. Choices
@@ -101,35 +103,26 @@ msgstr ""
 " kernel        \t\tđừng dùng tập tin « serial.conf »:\n"
 "\t\t\t\t\tdùng thiết lập hạt nhân vào lúc khởi động."
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid "Error during update-modules configuration for setserial"
-msgstr ""
-"Gặp lỗi trong khi cáu hình update-modules (cập nhật mô-đun) cho setserial"
+#~ msgid "Error during update-modules configuration for setserial"
+#~ msgstr ""
+#~ "Gặp lỗi trong khi cáu hình update-modules (cập nhật mô-đun) cho setserial"
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"The setserial configuration process tried to install the module management "
-"code to support the serial.o module being loaded and unloaded dynamically by "
-"the kernel module loader."
-msgstr ""
-"Tiến trình cấu hình setserial đã thử cài đặt mã quản lý mô-đun để hỗ trợ mô-"
-"đun serial.0 đang được nạp và bỏ nạp bởi bộ nạp mô-đun hạt nhân."
+#~ msgid ""
+#~ "The setserial configuration process tried to install the module "
+#~ "management code to support the serial.o module being loaded and unloaded "
+#~ "dynamically by the kernel module loader."
+#~ msgstr ""
+#~ "Tiến trình cấu hình setserial đã thử cài đặt mã quản lý mô-đun để hỗ trợ "
+#~ "mô-đun serial.0 đang được nạp và bỏ nạp bởi bộ nạp mô-đun hạt nhân."
 
-#. Type: error
-#. Description
-#: ../templates:4001
-msgid ""
-"This process failed. This may be caused by a non-standard module "
-"configuration and should be solved manually by running '/sbin/update-"
-"modules'."
-msgstr ""
-"Tiến trình này đã bị lỗi. Lỗi này có thể do một cấu hình mô-đun khác chuẩn, "
-"và nên được giải quyết bằng tay bằng cách chạy lệnh cập nhật « /sbin/update-"
-"modules »."
+#~ msgid ""
+#~ "This process failed. This may be caused by a non-standard module "
+#~ "configuration and should be solved manually by running '/sbin/update-"
+#~ "modules'."
+#~ msgstr ""
+#~ "Tiến trình này đã bị lỗi. Lỗi này có thể do một cấu hình mô-đun khác "
+#~ "chuẩn, và nên được giải quyết bằng tay bằng cách chạy lệnh cập nhật « /"
+#~ "sbin/update-modules »."
 
 #~ msgid "Please read documentation on old 0setserial entries"
 #~ msgstr "Hãy đọc tài liệu hướng dẫn về các mục nhập « 0setserial » cũ"
@@ -142,11 +135,11 @@ msgstr ""
 #~ "đổi hoàn toàn kể từ phiên bản setserial 2.14."
 
 #~ msgid ""
-#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial.pre-"
-#~ "2.15."
+#~ "Your old /etc/rc.boot/0setserial file was just renamed to 0setserial."
+#~ "pre-2.15."
 #~ msgstr ""
-#~ "Tập tin « /etc/rc.boot/0setserial » cũ của bạn mới được thay đổi tên thành "
-#~ "« 0setserial.pre-2.15 »."
+#~ "Tập tin « /etc/rc.boot/0setserial » cũ của bạn mới được thay đổi tên "
+#~ "thành « 0setserial.pre-2.15 »."
 
 #~ msgid ""
 #~ "Read /usr/share/doc/setserial/README.Debian.gz file for more information."

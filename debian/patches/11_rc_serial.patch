@@ -2,10 +2,11 @@ From: Jonas Genannt <jonas.genannt@capi2name.de>
 Subject: setserial rc.serial patch
 
 
-diff -Naurp setserial-2.17.orig/rc.serial setserial-2.17/rc.serial
---- setserial-2.17.orig/rc.serial	2008-09-26 21:59:11.000000000 +0000
-+++ setserial-2.17/rc.serial	2008-09-26 21:59:26.000000000 +0000
-@@ -1,134 +1,171 @@
+Index: setserial/rc.serial
+===================================================================
+--- setserial.orig/rc.serial	2006-06-20 10:02:58.000000000 +0200
++++ setserial/rc.serial	2006-06-20 10:30:35.000000000 +0200
+@@ -1,134 +1,192 @@
 -#
 +#! /bin/sh
  # /etc/rc.serial 
@@ -122,6 +123,9 @@ diff -Naurp setserial-2.17.orig/rc.serial setserial-2.17/rc.serial
  	action="stop";
 +	[ -f ${etcconfig} ] && exit 0
 +	;;
++status)
++	action="status";
++	;;
 +modload)
 +	action="modload";
 +	;;
@@ -234,6 +238,7 @@ diff -Naurp setserial-2.17.orig/rc.serial setserial-2.17/rc.serial
 -else
 -	echo "###AUTOSAVE###" > /etc/serial.conf
 +if test $action  = start ; then
++  outmsg=""
 +  echo "Loading the saved-state of the serial devices... "
 +  rm -f ${modconf}
 +
@@ -246,13 +251,22 @@ diff -Naurp setserial-2.17.orig/rc.serial setserial-2.17/rc.serial
 +        while read device args
 +        do
 +               case "$device" in
++                  "#KERNEL")
++                       outmsg="... handled by kernel"
++                       continue
++                       ;;
 +                   ""|\#*)
 +                       continue
 +                       ;;
 +               esac
++           outmsg=""
 +           ${SETSERIAL} -z $device $args
 +           ${SETSERIAL} -bg $device
 +        done < $readfrom
++        if test ! "$outmsg" = "" ; then
++          echo $outmsg
++        fi
++
 +  else
 +	echo "###AUTOSAVE###" > $autoconfig
 +  fi
@@ -263,6 +277,14 @@ diff -Naurp setserial-2.17.orig/rc.serial setserial-2.17/rc.serial
 +	rm -f ${modconf}
 +	${SETSERIAL} -G -g ${ALLDEVS} | grep -v "uart unknown\|pcmcia" > ${modconf}
 +	echo "done."
++	exit 0
++fi
++
++if test $action  = status ; then
++	echo "Status of serial devices: ${ALLDEVS}"
++       for d in ${ALLDEVS}; do
++	  ${SETSERIAL} -a ${d}
++       done
 +	exit 0
  fi
 -

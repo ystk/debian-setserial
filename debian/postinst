@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/sh 
+
+set -e
 
 # determine architecture
 ARCH=`dpkg --print-architecture`
@@ -63,9 +65,9 @@ fi
 if [ "$1" = "configure" ]; then
 
 if [ -r /etc/init.d/etc-setserial ] ; then
-    update-rc.d etc-setserial start 30 S . stop 30 0 6 . >/dev/null
+    update-rc.d etc-setserial start 30 S . stop 30 0 1 6 . >/dev/null
 fi
-update-rc.d setserial start 46 S . stop 19 0 6 . >/dev/null
+update-rc.d setserial start 46 S . stop 19 0 1 6 . >/dev/null
 
 if [ -f /usr/share/debconf/confmodule ]; then # debconf exists
 
@@ -124,14 +126,15 @@ if [ "$ARCH" != "m68k" ]; then
        fi
        ;;
   esac
-  if [ -x /sbin/update-modules ]; then
-    #db_get setserial/usemodup
-    #if [ "$RET" = "true" ]; then
-     if ! /sbin/update-modules ; then
-      WHOCARES=0;
-     fi
-    #fi
-  fi
+# HHH update-modules removed
+#  if [ -x /sbin/update-modules ]; then
+#    #db_get setserial/usemodup
+#    #if [ "$RET" = "true" ]; then
+#     if ! /sbin/update-modules ; then
+#      WHOCARES=0;
+#     fi
+#    #fi
+#  fi
 fi
 
 else # debconf doesn't exist, revert to old type of questions
@@ -182,21 +185,22 @@ if [ -r /etc/rc.boot/0setserial ] ; then
   fi
 fi
 
-if [ "$ARCH" != "m68k" ] && [ -x /sbin/update-modules ]; then
-  if ! /sbin/update-modules ; then
-    cat <<END >&2
- WARNING: setserial tried to install the module management code to support
- the serial.o module being loaded and unloaded dynamically by kerneld (or
- its equivalent). However, update-modules failed to allow its installation.
-
- There may be something non-standard about your module configuration.
- You should try running /sbin/update-modules on your own.
-
- Please press <enter> to continue...
-END
-    read KEYPRESS
-  fi
-fi
+# HHH update-modules removed
+#if [ "$ARCH" != "m68k" ] && [ -x /sbin/update-modules ]; then
+#  if ! /sbin/update-modules ; then
+#    cat <<END >&2
+# WARNING: setserial tried to install the module management code to support
+# the serial.o module being loaded and unloaded dynamically by kerneld (or
+# its equivalent). However, update-modules failed to allow its installation.
+#
+# There may be something non-standard about your module configuration.
+# You should try running /sbin/update-modules on your own.
+#
+# Please press <enter> to continue...
+#END
+#    read KEYPRESS
+#  fi
+#fi
 
 fi # debconf or not
 
